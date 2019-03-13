@@ -40,8 +40,8 @@ public class SampleTestCase {
 		driver.get(prop.getProperty("baseUrl") + "/sampleproject");
 		
 		TopPage topPage = new TopPage(driver);
-		assertEquals("蜷榊ｭ�", topPage.getLastNameLabel());
-		assertEquals("蜷榊燕", topPage.getFirstNameLabel());
+		assertEquals("名字", topPage.getLastNameLabel());
+		assertEquals("名前", topPage.getFirstNameLabel());
 
 		assertTrue(topPage.hasLastNameInput());
 		assertTrue(topPage.hasFirstNameInput());
