@@ -61,9 +61,9 @@ public class SampleTestCase {
 		Calendar calendar = Calendar.getInstance();
 		int hour = calendar.get(Calendar.HOUR_OF_DAY);
 		if (hour < 12) {
-			greeting = "[Good morning]";
+			greeting = "Good morning";
 		} else {
-			greeting = "[Hello]";
+			greeting = "Hello";
         }
 		ResultPage resultPage = new ResultPage(driver);
 		assertEquals(greeting + ", Hoge Foo!!", resultPage.getText());
