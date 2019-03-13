@@ -78,7 +78,7 @@ public class SampleTestCase {
 		page.submit();
 		
 		ResultPage resultPage = new ResultPage(driver);
-		assertEquals("繧ｨ繝ｩ繝ｼ", resultPage.getText());
+		assertEquals("エラー", resultPage.getText());
 	}
 
 	@Test
@@ -90,6 +90,6 @@ public class SampleTestCase {
 		page.submit();
 		
 		ResultPage resultPage = new ResultPage(driver);
-		assertEquals("繧ｨ繝ｩ繝ｼ", resultPage.getText());
+		assertEquals("エラー", resultPage.getText());
 	}
 }
