@@ -24,6 +24,8 @@ public class SampleTestCase {
 	
 	@BeforeClass
 	public static void setUpClass() throws IOException {
+	    String path = "C:\\tools\\geckodriver-v0.24.0-win64\\geckodriver.exe";
+	    System.setProperty("webdriver.gecko.driver", path);
 		prop.load(new FileInputStream("target\\test-classes\\selenium.properties"));
 		driver = new FirefoxDriver();
 	}
@@ -38,8 +40,8 @@ public class SampleTestCase {
 		driver.get(prop.getProperty("baseUrl") + "/sampleproject");
 		
 		TopPage topPage = new TopPage(driver);
-		assertEquals("名字", topPage.getLastNameLabel());
-		assertEquals("名前", topPage.getFirstNameLabel());
+		assertEquals("蜷榊ｭ�", topPage.getLastNameLabel());
+		assertEquals("蜷榊燕", topPage.getFirstNameLabel());
 
 		assertTrue(topPage.hasLastNameInput());
 		assertTrue(topPage.hasFirstNameInput());
@@ -76,7 +78,7 @@ public class SampleTestCase {
 		page.submit();
 		
 		ResultPage resultPage = new ResultPage(driver);
-		assertEquals("エラー", resultPage.getText());
+		assertEquals("繧ｨ繝ｩ繝ｼ", resultPage.getText());
 	}
 
 	@Test
@@ -88,6 +90,6 @@ public class SampleTestCase {
 		page.submit();
 		
 		ResultPage resultPage = new ResultPage(driver);
-		assertEquals("エラー", resultPage.getText());
+		assertEquals("繧ｨ繝ｩ繝ｼ", resultPage.getText());
 	}
 }
