@@ -61,6 +61,6 @@ public class TopPage {
 
     public void submit() {
 		driver.findElement(By.xpath(
-				"//input[@type='submit' and @name='send']")).submit();
+				"//input[@type='submit' and @name='send']")).click();
 	}
 }
